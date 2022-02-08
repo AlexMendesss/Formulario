@@ -23,7 +23,7 @@
         </div>
 
         <!-- Início do formulário -->
-        <form>
+        <form action="cadastro.php" method="POST">
 
             <fieldset class="grupo">
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
@@ -62,11 +62,11 @@
             <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
                 <label for="senioridade"><strong>Senioridade</strong></label>
-                <select id="senioridade" required>
+                <select id="senioridade" name="senioridade" required>
                   <option selected disabled value="">Selecione</option>
-                  <option>Júnior</option>
-                  <option>Pleno</option>
-                  <option>Sênior</option>
+                  <option value="Junior">Júnior</option>
+                  <option value="Pleno">Pleno</option>
+                  <option value="Senior">Sênior</option>
                 </select>
             </div>
 
@@ -74,19 +74,19 @@
                 <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
                 <div id="check">
                     <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+                    <input type="checkbox" id="tecnologia1" name="tecnologia[]" value="HTML">
                     <label for="tecnologia1"> HTML</label>
-                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                    <input type="checkbox" id="tecnologia2" name="tecnologia[]" value="CSS">
                     <label for="tecnologia2"> CSS</label>
-                    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript">
+                    <input type="checkbox" id="tecnologia3" name="tecnologia[]" value="JavaScript">
                     <label for="tecnologia3"> JavaScript</label>
-                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+                    <input type="checkbox" id="tecnologia4" name="tecnologia[]" value="PHP">
                     <label for="tecnologia4"> PHP</label>
-                    <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+                    <input type="checkbox" id="tecnologia5" name="tecnologia[]" value="C#">
                     <label for="tecnologia5"> C#</label>
-                    <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
+                    <input type="checkbox" id="tecnologia6" name="tecnologia[]" value="Python">
                     <label for="tecnologia6"> Python</label>
-                    <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
+                    <input type="checkbox" id="tecnologia7" name="tecnologia[]" value="Java">
                     <label for="tecnologia7"> Java</label>
                 </div>
             </fieldset>
@@ -99,7 +99,7 @@
             </div>
 
             <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+            <button class="botao" type="submit" name="enviar" onsubmit="">Concluído</button>            
 
         </form>
 
